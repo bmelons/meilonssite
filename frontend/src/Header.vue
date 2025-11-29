@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     clickHandle(a) {
-      console.log(a.target.id)
+      this.$emit("clickedEvent",a.target.id);
     },
   },
 }

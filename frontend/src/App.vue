@@ -7,19 +7,32 @@
   />
   <link href="./style.css" rel="stylesheet" />
   <div class="content">
-    <Header></Header>
-    <Landing></Landing>
+    <Header @clickedEvent="changePage"></Header>
+    <transition>
+      <Landing v-if="currentPage === 'Home'"></Landing>
+    </transition>
   </div>
   <particles class="particles"></particles>
 </template>
 
-<script>
+<script lang="js">
 import Header from './Header.vue'
 import Particles from './Particles.vue'
 import Landing from './pages/Landing.vue'
 import './style.css'
 
 export default {
+  data() {
+    return {
+      currentPage: 'Home',
+    }
+  },
+  methods: {
+    changePage(id) {
+      this.currentPage = id
+      console.log(id)
+    },
+  },
   components: {
     Particles,
     Landing,

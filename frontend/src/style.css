@@ -73,3 +73,12 @@ button {
   line-height: 1em;
   margin: 0.5em;
 }
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.1s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}

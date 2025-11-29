@@ -1,5 +1,6 @@
 <template>
-  <div class="box">
-    <h2>lorem ipsum dolor sit amet penis</h2>
+  <div class="box content">
+    <h2>About me</h2>
+    <p>bro is </p>
   </div>
 </template>

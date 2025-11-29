@@ -85,7 +85,7 @@ export default {
             value: 350,
           },
           opacity: {
-            value: 0.2,
+            value: 0.1,
           },
           shape: {
             type: 'circle',
