@@ -1,0 +1,75 @@
+:root {
+  --primary-color: rgb(234, 239, 244);
+  --primary-bg: #484349;
+  --primary-bg-gradient: linear-gradient(0deg, #191518 0%, #272229 100%);
+}
+
+* {
+  color: var(--primary-color);
+  font-family: 'Yusei Magic', sans-serif;
+}
+
+.comic-relief-regular {
+  font-family: 'Comic Relief', system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comic-relief-bold {
+  font-family: 'Comic Relief', system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.yusei-magic-regular {
+  font-family: 'Yusei Magic', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.particles {
+  position: absolute;
+
+  z-index: -1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.site-name {
+  font-size: 30pt;
+}
+
+.header {
+  width: 90%;
+  max-width: 600px;
+}
+
+.box {
+  background: linear-gradient(0deg, #29242f 0%, #3b3543 100%);
+  padding: 1em 2em 1em 2em;
+  border-radius: 20px;
+  box-shadow:
+    0 0 3px #e9e0ea6d,
+    0px 5px 10px #191518;
+  margin: 1em;
+}
+.hlist {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  font-size: 16pt;
+  background: var(--primary-bg-gradient);
+  border: none;
+  border-radius: 10px;
+  padding: 0.5em 1em 0.5em 1em;
+  line-height: 1em;
+  margin: 0.5em;
+}
