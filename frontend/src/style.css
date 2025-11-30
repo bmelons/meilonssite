@@ -40,6 +40,11 @@
 }
 .site-name {
   font-size: 30pt;
+  line-height: 10px;
+}
+.subtitle {
+  font-size: 20pt;
+  line-height: 10px;
 }
 
 .header {
@@ -57,9 +62,16 @@
   margin: 1em;
 }
 .hlist {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.vlist {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
