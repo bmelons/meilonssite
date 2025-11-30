@@ -1,13 +1,13 @@
 <template>
   <div class="box content header">
-    <h1 class="site-name">Wecome my website</h1>
+    <h1 class="site-name">gaykitty.online</h1>
     <div class="hlist">
       <button v-for="txt in buttons" v-bind:id="txt" @click="clickHandle">{{ txt }}</button>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   data() {
     return {
@@ -15,7 +15,7 @@ export default {
     }
   },
   methods: {
-    clickHandle(a) {
+    clickHandle(a:any) {
       this.$emit("clickedEvent",a.target.id);
     },
   },

@@ -1,6 +1,6 @@
 <template>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link
     href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Yusei+Magic&display=swap"
     rel="stylesheet"
@@ -8,16 +8,18 @@
   <link href="./style.css" rel="stylesheet" />
   <div class="content">
     <Header @clickedEvent="changePage"></Header>
-    <transition>
+    <transition-group>
       <Landing v-if="currentPage === 'Home'"></Landing>
-    </transition>
+      <Characters v-if="currentPage === 'Characters'"></Characters>
+    </transition-group>
   </div>
   <particles class="particles"></particles>
 </template>
 
-<script lang="js">
+<script lang="ts">
 import Header from './Header.vue'
 import Particles from './Particles.vue'
+import Characters from './pages/Characters.vue'
 import Landing from './pages/Landing.vue'
 import './style.css'
 
@@ -28,7 +30,7 @@ export default {
     }
   },
   methods: {
-    changePage(id) {
+    changePage(id:string) {
       this.currentPage = id
       console.log(id)
     },
@@ -37,6 +39,7 @@ export default {
     Particles,
     Landing,
     Header,
+    Characters,
   },
 }
 </script>

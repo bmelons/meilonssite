@@ -5,9 +5,9 @@
     
     <vue-particles
       id="tsparticles"
-      @particles-loaded="particlesLoaded"
+   
     />
-    <vue-particles class="p" id="tsparticles" @particles-loaded="particlesLoaded" :options="options" />
+    <vue-particles class="p" id="tsparticles"  :options="options" />
     
   </div>
 </template>
@@ -20,10 +20,10 @@
 
 </style>
 
-<script lang="js">
-const particlesLoaded = async (container) => {
-  console.log('Particles container loaded', container)
-}
+<script lang="ts">
+// const particlesLoaded :any= async (container:any) => {
+//   console.log('Particles container loaded', container)
+// }
 
 export default {
   data() {
