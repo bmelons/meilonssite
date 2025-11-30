@@ -12,6 +12,7 @@
       <Landing v-if="currentPage === 'Home'"></Landing>
       <Commissions v-if="currentPage === 'Commissions'"></Commissions>
       <Characters v-if="currentPage === 'Characters'"></Characters>
+      <Socials v-if="currentPage === 'Socials'"></Socials>
     </transition-group>
   </div>
   <particles class="particles"></particles>
@@ -23,6 +24,8 @@ import Particles from './Particles.vue'
 import Characters from './pages/Characters.vue'
 import Commissions from './pages/Commissions.vue'
 import Landing from './pages/Landing.vue'
+import Socials from './pages/Socials.vue'
+import Mature from './pages/Mature.vue'
 import './style.css'
 
 export default {
@@ -42,7 +45,9 @@ export default {
     Landing,
     Header,
     Characters,
-    Commissions
+    Commissions,
+    Socials,
+    Mature
   },
 }
 </script>
