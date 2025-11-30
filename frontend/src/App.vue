@@ -7,9 +7,10 @@
   />
   <link href="./style.css" rel="stylesheet" />
   <div class="content">
-    <Header @clickedEvent="changePage"></Header>
+    <Header :activePage="currentPage" @clickedEvent="changePage"></Header>
     <transition-group>
       <Landing v-if="currentPage === 'Home'"></Landing>
+      <Commissions v-if="currentPage === 'Commissions'"></Commissions>
       <Characters v-if="currentPage === 'Characters'"></Characters>
     </transition-group>
   </div>
@@ -20,6 +21,7 @@
 import Header from './Header.vue'
 import Particles from './Particles.vue'
 import Characters from './pages/Characters.vue'
+import Commissions from './pages/Commissions.vue'
 import Landing from './pages/Landing.vue'
 import './style.css'
 
@@ -40,6 +42,7 @@ export default {
     Landing,
     Header,
     Characters,
+    Commissions
   },
 }
 </script>

@@ -61,13 +61,80 @@
     0px 5px 10px #191518;
   margin: 1em;
 }
-.hlist {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: nowrap;
+
+@media (min-width: 720px) {
+  .hlist {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  button {
+    cursor: pointer;
+    font-size: 16pt;
+    background: var(--primary-bg-gradient);
+    border: none;
+    border-radius: 10px;
+    padding: 0.5em 1em 0.5em 1em;
+    line-height: 1em;
+    margin: 0.5em;
+    transition: 0.1s ease-out;
+    box-shadow:
+      0 0 3px #e9e0ea6d,
+      0px 5px 10px #191518;
+  }
+  button:hover {
+    font-size: 18pt;
+    transition: 0.1s ease-out;
+    box-shadow:
+      0 0 2px #e9e0ea6d,
+      0px 5px 15px #191518,
+      0 -5px 10px #e89dd44f;
+  }
 }
+@media not (min-width: 720px) {
+  .hlist {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    flex-wrap: nowrap;
+  }
+  button {
+    width: 90%;
+    cursor: pointer;
+    font-size: 16pt;
+    background: var(--primary-bg-gradient);
+    border: none;
+    border-radius: 10px;
+    padding: 0.5em 1em 0.5em 1em;
+    line-height: em;
+    margin: 0em;
+    transition: 0.1s ease-out;
+    box-shadow:
+      0 0 3px #e9e0ea6d,
+      0px 5px 10px #191518;
+  }
+  button:hover {
+    font-size: 18pt;
+    transition: 0.1s ease-out;
+    box-shadow:
+      0 0 2px #e9e0ea6d,
+      0px 5px 15px #191518,
+      0 -5px 10px #e89dd44f;
+  }
+}
+
+.active {
+  background: linear-gradient(0deg, #292936 0%, #404f6b 100%);
+  transition: 0.5s ease-out;
+  font-weight: bold;
+  text-shadow: 0 2px 3px #1c2021;
+}
+
 .vlist {
   width: 90%;
   display: flex;
@@ -75,16 +142,13 @@
   justify-content: center;
 }
 
-button {
-  cursor: pointer;
-  font-size: 16pt;
-  background: var(--primary-bg-gradient);
-  border: none;
-  border-radius: 10px;
-  padding: 0.5em 1em 0.5em 1em;
-  line-height: 1em;
-  margin: 0.5em;
+.vflex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.1s ease;
@@ -94,3 +158,22 @@ button {
 .v-leave-to {
   opacity: 0;
 }
+b{
+  color: rgb(235, 184, 235);
+  text-shadow: 0 0 5px plum;
+  
+}
+
+input {
+  color: plum;
+  accent-color: plum;
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: -200px 0 0 200px #0056b3;
+}
+input[type="range"]::-moz-range-progress {
+  box-shadow: -200px 0 0 200px #80bb73;
+}
+/* input[type=radio] {
+
+} */
