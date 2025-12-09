@@ -1,5 +1,5 @@
 {
-  "name": "meilonsite",
+  "name": "api-tester",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -15,18 +15,13 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
-    "@tsparticles/engine": "^3.9.1",
-    "@tsparticles/vue3": "^3.0.1",
     "axios": "^1.13.2",
-    "tsparticles": "^3.9.1",
-    "vue": "^3.5.25",
-    "vue3-particles": "^2.12.0"
+    "vue": "^3.5.25"
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.3",
     "@types/node": "^24.10.1",
     "@vitejs/plugin-vue": "^6.0.2",
-    "@vitejs/plugin-vue-jsx": "^5.1.2",
     "@vue/tsconfig": "^0.8.1",
     "npm-run-all2": "^8.0.4",
     "prettier": "3.6.2",
